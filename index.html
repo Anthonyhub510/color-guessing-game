@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="selectedPrompt()">answer</button>
+    <p id="wheel"></p>
+    <script>
+  const selectedPrompt =function(){
+const choosenPrompt =   prompt("choose the right color") 
+console.log (choosenPrompt)
+const rolledColor = document.getElementById('wheel')
+   const color =['red','blue','green','purple','black','violet','orange']
+//    document.write(color)
+    const  chosenColor =color[(Math.floor(Math.random() * color.length))]
+    console.log(chosenColor)
+
+
+
+    if ( choosenPrompt == chosenColor ) rolledColor.innerHTML = "you got it"
+    else { rolledColor.innerHTML = "you didn't get it, try again"}
+ 
+
+}
+selectedPrompt()
+
+    </script>
+</body>
+</html>
